@@ -1,5 +1,5 @@
 # TP2_Docker
-
+Author : Alexandre Capbern
 --------------------------------
 Project
 --------------------------------
@@ -26,3 +26,4 @@ Docker-compose build two containers using a node-js image.
 The first contains the web application turning with
 a node js http-server available on localhost:8080
 on the host.
+
