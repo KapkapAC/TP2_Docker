@@ -1,5 +1,5 @@
 # TP2_Docker
-Author : Alexandre Capbern
+Alexandre Capbern
 --------------------------------
 Project
 --------------------------------
