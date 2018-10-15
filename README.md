@@ -9,7 +9,7 @@ cryto-currencies trading.
 In order to work this application needs a reverse proxy to
 communicate with the Binance API.
 
-To access all the features you need to have a private key 
+To access all the features, you need to have a private key 
 and a public key available by subscribing on Binance.
 
 Whitout keys you can't acces to User Data 
