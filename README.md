@@ -12,8 +12,8 @@ communicate with the Binance API.
 To access all the features, you need to have a private key 
 and a public key available by subscribing on Binance.
 
-Whitout keys you can't acces to User Data 
-and trades(buy/sell).
+Whithout keys you can't acces to User Data 
+and trades(buy/sell) but you have access to public data.
  
 
 --------------------------------
