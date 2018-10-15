@@ -1,7 +1,7 @@
 # TP2_Docker
 Alexandre Capbern
 --------------------------------
-Project
+Details
 --------------------------------
 This project is a web application that handle 
 cryto-currencies trading.
