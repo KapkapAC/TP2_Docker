@@ -1,0 +1,191 @@
+<html>
+	<head>
+		<title>Babern_trading</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link  href="css/main.css" rel="stylesheet"/>
+		<script src="js/jquery-3.3.1.js"></script>
+    <script src="js/rollups/hmac-sha256.js"></script>
+    
+    <script src="js/sorttable.js"></script>
+    <script src="js/anychart-base.min.js"></script>
+    <script src="js/anychart-stock.min.js"></script>
+    <script src="js/anychart-export.min.js"></script>
+    <script src="js/anychart-ui.min.js""></script>
+    <script src="js/main.js"></script>
+	</head>
+	<body>
+    <header>
+     <div  id="barmenu">
+        <div id=logo></div>
+        <div id="nomlogiciel"></div>
+        <div id = "heure"></div>
+     </div>
+
+      <nav>
+         <div class="hmenu" id="crypto">BTC/USDT&#8693;</div>
+            <div class="hmenu" id="containertable">
+							
+								<div class="hmenu" id="ongletbtc">BTC</div>
+								<div class="hmenu" id="ongletusdt">USDT</div>
+								<div class="hmenu" id="ongleteth">ETH</div>
+								<div class="hmenu" id="ongletbnb">BNB</div>
+						    <div class="hmenu" id="finborder"></div>
+							<div id="container_tt">
+              	<table id="table_USDT"></table>
+						  </div>
+            </div>
+
+      </nav>
+    </header>
+
+
+    <chart>
+      <div id="chartContainer">
+        <div id="chart"> </div>
+        <div id="menuchart">
+          <div class="ongletchart" id="typechart">Types
+            <div id="sousonglettype">
+              <div class="songletchart" id="bougies">Candle</div>
+              <div class="songletchart" id="Courbes">Line</div>
+              <div class="songletchart" id="ohlc">ohlc</div>
+            </div>
+
+          </div>
+          <div class="ongletchart" id="outils"> Outils
+              <div id="sousongletoutils">
+                <div class="songletchart" id="scroller">Scroller</div>
+            </div>
+          </div>
+          <div class="ongletchart" id="D"> 1D</div>
+          <div class="ongletchart" id="W"> 1W</div>
+          <div class="ongletchart" id="Hour"> 1Heure</div>
+          <div class="ongletchart" id="indicateur"> Indicateurs
+              <div id="sousongletindicateur">
+              <div class="songletchart" id="macd">MACD</div>
+            </div>
+          </div>
+
+      </div>
+      </div>
+    </chart>
+    <infoaccount>
+      <div id="infoaccount">
+          <div id="ongletinfoaccount">
+          <div id="fond">Fonds</div>
+          <div id="ordreouvert">Ordres ouverts</div>
+          <div id="ordreprog">Historique</div>
+          <input type="button" name="refreshinfoacc" id="refreshacc" >
+          </div>
+          <div id="containerinfotable">
+              <table id="table_info"></table>
+              <table id="table_ordreouvert"></table>
+              <table id="table_ordreprog"></table>
+          </div>
+      </div>
+    </infoaccount>
+    <Order>
+      <div id=containerorder>
+          <div id="ongletinfoorder">
+            <div id="ongletmarket">Marché</div>
+            <div id="ongletpersonnalise">Prix Personnalisé</div>
+            <div id="botstoplose">Programmation</div>
+            <div id="ongletrobot">Robot</div>
+
+          </div>
+          <div id=divmarket>
+            <div class="divachat" id="divachat">
+              <label id="achetermonnaie"></label>
+              <label id="Marketprix">Prix:</label>
+              <label id="Marketmontant">Montant:</label>
+              <input id ="Imputprix" type="text" name="Mprix" value="Prix du marché" disabled><br>
+              <input id ="Imputmontant" type="text" name="Mprix">
+              <input id ="Imputbuttonacheter" type="button" value="Acheter" name="MbuttonAcheter">
+            </div>
+            <div id="divvendre">
+              <label id="vendremonnaie"></label>
+              <label id="Marketprix2">Prix:</label>
+              <label id="Marketmontant2">Montant:</label>
+              <input id ="Imputprix2" type="text" name="Mprix" value="Prix du marché" disabled><br>
+              <input id ="Imputmontant2" type="text" name="Mprix">
+              <input id ="Imputbuttonvendre" type="button" value="Vendre" name="MbuttonVendre">
+
+            </div>
+          </div>
+          <div id="divprixperso">
+            <div class="divachat" id="divachatperso">
+              <label id="achetermonnaieperso"></label>
+              <label id="Marketprixperso">Prix:</label>
+              <label id="Marketmontantperso">Montant:</label>
+              <input id ="Imputprixperso" type="text" name="Mprix" ><br>
+              <input id ="Imputmontantperso" type="text" name="Mprix">
+              <input id ="Imputbuttonacheterperso" type="button" value="Acheter" name="MbuttonAcheter">
+            </div>
+            <div id="divvendre" id="divvendreperso">
+              <label id="vendremonnaieperso"></label>
+              <label id="Marketprixperso2">Prix:</label>
+              <label id="Marketmontantperso2">Montant:</label>
+              <input id ="Imputprixperso2" type="text" name="Mprix" ><br>
+              <input id ="Imputmontantperso2" type="text" name="Mprix">
+              <input id ="Imputbuttonvendreperso" type="button" value="Vendre" name="MbuttonVendre">
+              
+            </div>
+
+          </div>
+
+          <div id="divprogrammation">
+            <div class="divachat" id="divachatprog">
+              <label id="achetermonnaieprog"></label>
+              <label id="Marketprixprog">Prix:</label>
+              <label id="Marketmontantprog">Montant:</label>
+              <label id="seuilprog">Seuil:</label>
+              <input id ="Imputprixprog" type="text" name="Mprix"><br>
+              <input id ="Imputmontantprog" type="text" name="Mprix">
+              <input id ="Imputseuilprog" type="text" name="Mprix">
+              <input id ="Imputbuttonacheterprog" type="button" value="Acheter" name="MbuttonAcheter">
+            </div>
+            <div id="divvendre" id="divvendreprog">
+              <label id="vendremonnaieprog"></label>
+              <label id="Marketprixprog2">Prix:</label>
+              <label id="Marketmontantprog2">Montant:</label>
+              <label id="seuilprog2">Seuil:</label>
+              <input id ="Imputprixprog2" type="text" name="Mprix"><br>
+              <input id ="Imputseuilprog2" type="text" name="Mprix">
+              <input id ="Imputmontantprog2" type="text" name="Mprix">
+              <input id ="Imputbuttonvendreprog" type="button" value="Vendre" name="MbuttonVendre">
+              
+            </div>
+
+          </div>
+           <div id="divrobot">
+              <input id ="Imputstartrobot" type="button" value="Start" name="MbuttonVendre">
+              <input id ="Imputstoprobot"  type="button" value="Stop" name="MbuttonVendre">
+           
+            </div>
+
+          </div>
+
+      </div>
+    </Order>
+
+    <listOrderMarket>
+      <div id="divlistordermarket">
+        <label id="prixmarchelabel">Prix actuel du marché:</label>
+        <label id="prixmarchelabelvaleur">8000</label>
+        <div id="containertablemarket">
+          <table id="table_market"></table>
+        </div>
+       
+        
+
+      </div>  
+    </listOrderMarket>
+
+    <div id=cache_credits></div>
+  </body>
+  <script>
+
+
+  </script>
+
+</html>
