@@ -19,7 +19,7 @@ and trades(buy/sell) but you have access to public data.
 --------------------------------
 Docker
 --------------------------------
-You just have to run "docker-compose up" from this directory
+You just have to run "docker-compose up" from this directory.
 
 Docker-compose build two containers using a node-js image.
 
